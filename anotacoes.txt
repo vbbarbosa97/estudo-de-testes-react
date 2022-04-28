@@ -1,0 +1,6 @@
+Bibliotecas Utilizadas:
+- jest
+- @types/jest
+- @testing-library/react
+- @testing-library/jest-dom
+- @testing-library/user-event

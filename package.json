@@ -1,5 +1,5 @@
 {
-  "name": "estudo-de-testes",
+  "name": "estudo-de-testes-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "lodash.xor": "^4.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -39,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash.xor": "^4.5.7",
+    "jest": "^28.0.1"
   }
 }
