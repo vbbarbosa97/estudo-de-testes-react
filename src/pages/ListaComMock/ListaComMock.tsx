@@ -31,7 +31,7 @@ export const ListaComMock = () => {
         value={texto}
         onChange={(event) => setTexto(event.currentTarget.value)}
       />
-      <div className="Container">
+      <div className="Container" data-testid="container">
         {lista.map((item) => (
           <div key={item.id} className="ContainerUsuario">
             <span role="listitem">{item.name}</span>
