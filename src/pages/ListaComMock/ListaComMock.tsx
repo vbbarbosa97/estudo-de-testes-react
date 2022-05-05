@@ -24,6 +24,7 @@ export const ListaComMock = () => {
 
   return (
     <>
+      <h1 data-testid="titulo-pagina">ListaComMock</h1>
       <input
         placeholder="nome"
         className="CampoDeTexto"

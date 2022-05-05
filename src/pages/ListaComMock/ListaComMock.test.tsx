@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { ListaComMock } from "./ListaComMock";
 
-describe("<App />", () => {
+describe("<ListaComMock />", () => {
   it("deve listar 5 elementos dentro da lista", () => {
     render(<ListaComMock />);
 
