@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "axios": "^0.27.2",
     "lodash.xor": "^4.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@types/lodash.xor": "^4.5.7",
+    "axios-mock-adapter": "^1.20.0",
     "jest": "^28.0.1"
   }
 }
