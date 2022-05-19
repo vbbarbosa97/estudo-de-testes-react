@@ -4,3 +4,4 @@ Bibliotecas Utilizadas:
 - @testing-library/react
 - @testing-library/jest-dom
 - @testing-library/user-event
+- msw [lib que vai simular um servidor, para mockar as respostas de apis, motivação é não precisar mudar o teste se o serviço utilizar fetch ou axios e poder passar a rota]

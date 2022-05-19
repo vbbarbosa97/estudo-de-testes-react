@@ -5,24 +5,33 @@ import {
   screen,
   waitForElementToBeRemoved,
 } from "@testing-library/react";
-import axios from "axios";
+import { rest } from "msw";
+import { setupServer } from "msw/node";
+import { url_marvel_api } from "../../utils/constants";
 import { listaFake } from "../../utils/mock";
 import { ListaComApi } from "./ListaComApi";
 
-jest.mock("axios");
+const url = `${url_marvel_api}/api/user/`;
 
-const mockedAxios = jest.mocked(axios);
-const mockedAxiosGet = jest.mocked(mockedAxios.get);
+const server = setupServer();
 
-describe("<ListaComApi /> {Utilizando mock do jest}", () => {
+beforeAll(() => server.listen());
+afterAll(() => server.close());
+afterEach(() => server.resetHandlers());
+
+describe("<ListaComApi /> {Utilizando Server do msw}", () => {
   beforeEach(() => {
-    mockedAxiosGet.mockResolvedValue({
-      data: {
-        data: listaFake,
-        message: "",
-        success: true,
-      },
-    });
+    server.use(
+      rest.get(url, (req, res, ctx) => {
+        return res(
+          ctx.json({
+            data: listaFake,
+            message: "",
+            success: true,
+          })
+        );
+      })
+    );
   });
 
   describe("deve listar 5 elementos dentro da lista", () => {
