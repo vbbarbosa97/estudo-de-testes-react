@@ -41,3 +41,8 @@ describe("<ListaComApi /> {Utilizando mock do jest}", () => {
     });
   });
 });
+
+/** NOTAS: Essa forma pode ser utilizada quando o componente só faz uma unica chamada na api,
+ * pois não é necessario passar a rota que será utilizada na chamada da api, mas caso fosse preciso
+ * chamar duas rotas teria um pouco mais de complexidade.
+ */

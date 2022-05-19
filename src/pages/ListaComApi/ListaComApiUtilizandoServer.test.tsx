@@ -50,3 +50,8 @@ describe("<ListaComApi /> {Utilizando Server do msw}", () => {
     });
   });
 });
+
+/** NOTAS: Melhor forma de realizar o teste que contém chamada na api, é possivel utilizar rotas,
+ * pegar parametros e outras funcionalidades descritas na documentação, é possivel também manter o mesmo teste
+ * caso o serviço mude de axios para fetch por exemplo.
+ */
